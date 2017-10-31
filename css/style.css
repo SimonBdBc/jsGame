@@ -1,0 +1,79 @@
+body{
+  background-image: url("../image/carbon.png");
+  background-repeat: repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Orbitron', sans-serif;
+}
+.gameScreen{
+  background-color: lightgrey;
+  width: 70vw;
+  height: 70vh;
+}
+.hidden{
+  display: none!important;
+}
+.resetButton{
+  position: fixed;
+  top: 1px;
+  left: 1px;
+  border-radius: 5px;
+  width: 60px;
+  height: 30px;
+}
+section[data-state="optionScreen"]{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+section[data-state="optionScreen"] h2{
+  font-size: 50px;
+  margin: 10%;
+  color:red;
+  text-shadow: 5px 5px 5px #000;
+}
+section[data-state="optionScreen"] h3{
+  margin-top: 0;
+  margin-bottom: 0px;
+}
+section[data-state="optionScreen"] input{
+  width: 50px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+section[data-state="optionScreen"] label{
+  margin-top: 5%;
+}
+section[data-state="optionScreen"] input, section[data-state="optionScreen"] label{
+
+}
+.startButton{
+  margin: 10%;
+  border-radius: 5px;
+  width: 160px;
+  height: 40px;
+}
+section[data-state="playScreen"]{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.gameDiv{
+  height: 38px;
+  width: 38px;
+  border: 1px solid white;
+}
+.gameContainer{
+  display: flex;
+  flex-wrap: wrap;
+}
+section[data-state="victory"] h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My Game</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+  </head>
+  <body>
+    <button class="resetButton" data-action="reset">Reset</button>
+    <section data-state="optionScreen" class="gameScreen hidden">
+      <h2>Monsters</h2>
+      <h3>Options : </h3>
+      <label for="x">Nombre de cases sur l'axe X</label>
+      <input id="x" type="number" name="x" value="10">
+      <label for="y">Nombre de cases sur l'axe Y</label>
+      <input id="y" type="number" name="y" value="10">
+      <button class="startButton" data-action="startGame"><h3>Start Game</h3></button>
+    </section>
+    <section data-state="playScreen" class="gameScreen hidden"></section>
+    <section data-state="victory" class="gameScreen hidden"><h1>Good Game !</h1></section>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script type ="text/javascript" src="./js/script.js"></script>
+</html>
