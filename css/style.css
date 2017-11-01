@@ -5,6 +5,7 @@ body{
   justify-content: center;
   align-items: center;
   height: 100vh;
+  margin:0;
   font-family: 'Orbitron', sans-serif;
 }
 .gameScreen{
@@ -71,7 +72,7 @@ section[data-state="playScreen"]{
   display: flex;
   flex-wrap: wrap;
 }
-section[data-state="victory"] h1{
+section[data-state="victory"] h1, section[data-state="loose"] h1{
   display: flex;
   justify-content: center;
   align-items: center;
