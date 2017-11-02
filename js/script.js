@@ -94,6 +94,12 @@ $(document).ready(function() {
       }
     });
   }
+  function checkVictory(currentPlayerPos) {
+    if(currentPlayerPos.x == JSON.parse(localStorage.getItem('goalPos')).x && currentPlayerPos.y == JSON.parse(localStorage.getItem('goalPos')).y) {
+      displayScreen('victory');
+      localStorage.setItem('gameState', 'victory');
+    }
+  }
 
   function movePlayer(direction) {
     var currentPlayerPos = JSON.parse(localStorage.getItem('playerPos'));
@@ -159,6 +165,7 @@ $(document).ready(function() {
         checkVictory(currentPlayerPos);
         localStorage.setItem('playerPos', JSON.stringify(currentPlayerPos));
       };
+    }
       checkLoose();
       moveMob();
       while(JSON.parse(localStorage.getItem('mobPos')).x == JSON.parse(localStorage.getItem('goalPos')).x && JSON.parse(localStorage.getItem('mobPos')).y == JSON.parse(localStorage.getItem('goalPos')).y) {
@@ -213,16 +220,13 @@ $(document).ready(function() {
     var currentPlayerPos = JSON.parse(localStorage.getItem('playerPos'));
     var currentMobPos = JSON.parse(localStorage.getItem('mobPos'));
     if(currentPlayerPos.x == currentMobPos.x && currentPlayerPos.y == currentMobPos.y) {
-      displayScreen('loose');
+      setTimeout(function(){
+        displayScreen('loose');
+      }, 300);
       localStorage.setItem('gameState', 'loose');
     }
   }
-  function checkVictory(currentPlayerPos) {
-    if(currentPlayerPos.x == JSON.parse(localStorage.getItem('goalPos')).x && currentPlayerPos.y == JSON.parse(localStorage.getItem('goalPos')).y) {
-      displayScreen('victory');
-      localStorage.setItem('gameState', 'victory');
-    }
-  }
+
 
   function displayScreen(gameState) {
     $.each($('section[data-state!="' + gameState + '"]'), function(key, value) {
