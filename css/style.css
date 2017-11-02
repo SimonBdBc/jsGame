@@ -64,6 +64,7 @@ section[data-state="playScreen"]{
   align-items: center;
 }
 .gameDiv{
+  background-image: url("../image/grass1.jpg");
   height: 38px;
   width: 38px;
   border: 1px solid white;
